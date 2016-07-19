@@ -7,33 +7,33 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 endif()
 
 set(PYBIND11_EXAMPLES
-  example-methods-and-attributes.cpp
-  example-python-types.cpp
-  example-operator-overloading.cpp
-  example-constants-and-functions.cpp
-  example-callbacks.cpp
-  example-sequences-and-iterators.cpp
-  example-buffers.cpp
-  example-smart-ptr.cpp
-  example-modules.cpp
-  example-numpy-vectorize.cpp
-  example-arg-keywords-and-defaults.cpp
-  example-virtual-functions.cpp
-  example-keep-alive.cpp
-  example-opaque-types.cpp
-  example-pickling.cpp
-  example-inheritance.cpp
-  example-stl-binder-vector.cpp
-  example-eval.cpp
-  example-custom-exceptions.cpp
-  issues.cpp
+#  example-methods-and-attributes.cpp
+#  example-python-types.cpp
+#  example-operator-overloading.cpp
+#  example-constants-and-functions.cpp
+#  example-callbacks.cpp
+#  example-sequences-and-iterators.cpp
+#  example-buffers.cpp
+#  example-smart-ptr.cpp
+#  example-modules.cpp
+#  example-numpy-vectorize.cpp
+#  example-arg-keywords-and-defaults.cpp
+#  example-virtual-functions.cpp
+#  example-keep-alive.cpp
+#  example-opaque-types.cpp
+#  example-pickling.cpp
+#  example-inheritance.cpp
+#  example-stl-binder-vector.cpp
+#  example-eval.cpp
+#  example-custom-exceptions.cpp
+#  issues.cpp
 )
 
 # Check if Eigen is available
 find_package(Eigen3 QUIET)
 
 if(EIGEN3_FOUND)
-  list(APPEND PYBIND11_EXAMPLES eigen.cpp)
+  list(APPEND PYBIND11_EXAMPLES problem.cpp)
   message(STATUS "Building Eigen testcase")
 else()
   message(STATUS "NOT Building Eigen testcase")
